@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="kz.sdk.tourism.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kz.sdk.tourism.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="kz.sdk.tourism.fragments.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="kz.sdk.tourism.fragments.UserDetailsFragment"
+        android:label="UserDetailsFragment" >
+        <action
+            android:id="@+id/action_userDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="kz.sdk.tourism.fragments.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeDetailsFragment"
+        android:name="kz.sdk.tourism.fragments.PlaceDetailsFragment"
+        android:label="PlaceDetailsFragment" >
+        <argument
+            android:name="place"
+            app:argType="kz.sdk.tourism.models.Place" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="kz.sdk.tourism.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="kz.sdk.tourism.fragments.MapFragment"
+        android:label="MapFragment" />
+    <fragment
+        android:id="@+id/questFragment"
+        android:name="kz.sdk.tourism.fragments.QuestFragment"
+        android:label="QuestFragment" >
+        <action
+            android:id="@+id/action_questFragment_to_level1Fragment"
+            app:destination="@id/level1Fragment" />
+        <action
+            android:id="@+id/action_questFragment_to_level2Fragment"
+            app:destination="@id/level2Fragment" />
+        <action
+            android:id="@+id/action_questFragment_to_level3Fragment"
+            app:destination="@id/level3Fragment" />
+        <action
+            android:id="@+id/action_questFragment_to_level4FirstFragment"
+            app:destination="@id/level4FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level1Fragment"
+        android:name="kz.sdk.tourism.fragments.Level1Fragment"
+        android:label="Level1Fragment" >
+        <action
+            android:id="@+id/action_level1Fragment_to_level1ResultFragment"
+            app:destination="@id/level1ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level1ResultFragment"
+        android:name="kz.sdk.tourism.fragments.Level1ResultFragment"
+        android:label="Level1ResultFragment" >
+        <action
+            android:id="@+id/action_level1ResultFragment_to_questFragment"
+            app:destination="@id/questFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level2Fragment"
+        android:name="kz.sdk.tourism.fragments.Level2Fragment"
+        android:label="Level2Fragment" >
+        <action
+            android:id="@+id/action_level2Fragment_to_level2ResultFragment"
+            app:destination="@id/level2ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level2ResultFragment"
+        android:name="kz.sdk.tourism.fragments.Level2ResultFragment"
+        android:label="Level2ResultFragment" >
+        <action
+            android:id="@+id/action_level2ResultFragment_to_questFragment"
+            app:destination="@id/questFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level3Fragment"
+        android:name="kz.sdk.tourism.fragments.Level3Fragment"
+        android:label="Level3Fragment" >
+        <action
+            android:id="@+id/action_level3Fragment_to_level3ResultFragment"
+            app:destination="@id/level3ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level3ResultFragment"
+        android:name="kz.sdk.tourism.fragments.Level3ResultFragment"
+        android:label="Level3ResultFragment" >
+        <action
+            android:id="@+id/action_level3ResultFragment_to_questFragment"
+            app:destination="@id/questFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level4FirstFragment"
+        android:name="kz.sdk.tourism.fragments.Level4FirstFragment"
+        android:label="Level4FirstFragment" >
+        <action
+            android:id="@+id/action_level4FirstFragment_to_level4FirstResultFragment"
+            app:destination="@id/level4FirstResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level4FirstResultFragment"
+        android:name="kz.sdk.tourism.fragments.Level4FirstResultFragment"
+        android:label="Level4FirstResultFragment" >
+        <action
+            android:id="@+id/action_level4FirstResultFragment_to_level4SecondFragment"
+            app:destination="@id/level4SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level4SecondFragment"
+        android:name="kz.sdk.tourism.fragments.Level4SecondFragment"
+        android:label="Level4SecondFragment" >
+        <action
+            android:id="@+id/action_level4SecondFragment_to_level4SecondResultFragment"
+            app:destination="@id/level4SecondResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/level4SecondResultFragment"
+        android:name="kz.sdk.tourism.fragments.Level4SecondResultFragment"
+        android:label="Level4SecondResultFragment" >
+        <action
+            android:id="@+id/action_level4SecondResultFragment_to_questFragment"
+            app:destination="@id/questFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="kz.sdk.tourism.fragments.ProductDetailsFragment"
+        android:label="ProductDetailsFragment" >
+        <argument
+            android:name="product"
+            app:argType="kz.sdk.tourism.models.Product" />
+    </fragment>
+</navigation>
