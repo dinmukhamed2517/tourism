@@ -29,6 +29,11 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
                     R.id.action_homeFragment_to_searchFragment
                 )
             }
+            gids.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_homeFragment_to_gitsFragment
+                )
+            }
         }
         adapter1.itemClick = {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPlaceDetailsFragment(it))
@@ -36,6 +41,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
         adapter2.itemClick = {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToProductDetailsFragment(it))
         }
+
     }
 
     fun getPlaces():List<Place>{

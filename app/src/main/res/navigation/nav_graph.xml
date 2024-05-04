@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gitsFragment"
+            app:destination="@id/gitsFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -184,4 +187,8 @@
             android:name="product"
             app:argType="kz.sdk.tourism.models.Product" />
     </fragment>
+    <fragment
+        android:id="@+id/gitsFragment"
+        android:name="kz.sdk.tourism.fragments.GitsFragment"
+        android:label="GitsFragment" />
 </navigation>

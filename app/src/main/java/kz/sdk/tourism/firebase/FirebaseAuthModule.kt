@@ -27,5 +27,4 @@ object FirebaseAuthModule {
         return FirebaseStorage.getInstance()
             .getReference("Users/" + "${firebaseAuth.currentUser?.uid}")
     }
-
 }
